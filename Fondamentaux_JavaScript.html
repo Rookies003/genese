@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fondamentaux_JavaScript </title>
+  </head>
+  <body>
+    <!-- titre -->
+    <h1>JavaScript</h1>
+    <!-- sous titre -->
+    <h2>Table des matières</h2>
+    <ul>
+     <li>JavaScript................................................................................................................................... 1</li>
+     <li>Algorithmie............................................................................................................................ 3
+    </li>
+     <li>Les variables ...................................................................................................................... 3</li>
+     <li>Types de valeur.................................................................................................................. 3</li>
+     <li>Opérateurs......................................................................................................................... 4</li>
+     <li>Structures de contrôle....................................................................................................... 6
+    </li>
+     <li>Fonctions......................................................................................................................... 10
+    </li>
+     <li>Type String....................................................................................................................... 11</li>
+     <li>Type Array ....................................................................................................................... 12</li>
+     <li>Type Object...................................................................................................................... 14</li>
+     <li>Type Number................................................................................................................... 15</li>
+     <li>API Fetch.............................................................................................................................. 16</li>
+     <li>Async | Await....................................................................................................................... 17</li>
+     <li>Programmation Orientée Objet .......................................................................................... 18</li>
+     <li>Introduction..................................................................................................................... 18
+    </li>
+     <li>Classes personnalisées.................................................................................................... 19
+    </li>
+     <li>Méthodes ........................................................................................................................ 20</li>
+     <li>Création d’une instance .................................................................................................. 21</li>
+     <li>Héritage ........................................................................................................................... 22
+    </li>
+    <h2>Algorithmie</h2>
+
+    <h3>Les variables</h3><p>En JavaScript, il est possible de créer des conteneurs à valeur, afin de stocker jusqu’à la fin 
+      de l’exécution du code une valeur, dans le but de la réutiliser.
+      On appelle ces conteneurs « variables », et elles doivent être déclarées comme ceci :</p><p>Ici, nous avons créé la variable « exemple », et stockés la valeur « toto » (chaîne de 
+        caractères) à l’intérieur : le placement de la valeur se fait à l’aide de l’opération d’affectation 
+        « = ».
+        Lors de la première utilisation, il faut toujours déclarer leur portée :</p>
+    <li>- « let » permet d’utiliser la variable dans son bloc uniquement</li>
+    <li>- « var » permet d’utiliser la variable partout (variable globale)</li>
+    <li>- « const » permet de n’affecter une valeur à la variable une seule et unique fois</li>
+    <h3>Types de valeur</h3>
+    <p>Les différents types de valeurs en JavaScript sont les suivants :</p>
+    <li>- Number (nombres entiers, nombres réels)
+    </li>
+    <li>- Boolean (VRAI | FAUX)</li>
+    <li>- String (chaîne de caractères)
+    </li>
+    <li>- Array (tableaux)</li>
+    <li>- Object (objets)</li>
+    <li>- Function (fonctions |procédures)</li>
+    <h3>Opérateur</h3>
+    <h4>Affectation</h4>
+    <p>L’affectation est le fait d’associer ou de modifier une valeur à une variable.
+      On retrouve différents opérateurs d’affectation :</p>
+      <li>- « = » Affectation de la valeur à la variable</li>
+      <li>- « += » Ajout de la valeur à la variable (addition pour Number | concaténation pour 
+        String)
+        </li>
+      <li>- « -= » Soustraction de la valeur à la variable</li>
+      <li>- « *= » Multiplication de la variable</li>
+      <li>- « /= » Division de la variable</li>
+      <li>- « %= » Affectation du reste de l’opération de division</li>
+      <li>- « **= » Affectation du résultat de la variable à la puissance du nombre spécifié</li>
+      <h4>Arithmétique
+      </h4>
+      <p>Différentes opérations peuvent être réalisées en JavaScript, les opérateurs mis à disposition 
+        sont les suivants :
+        </p>
+        <li>- « % » A % B renvoie le reste de la division de A par B</li>
+        <li>- « ++ » A++ renvoie A et ajoute 1 ensuite | ++A ajoute 1 à A puis le renvoie</li>
+        <li>- « -- » A-- renvoie A et soustrait 1 ensuite | --A soustrait 1 à A puis le renvoie</li>
+        <li>- « + » A + B renvoie le résultat de l’addition de A et B</li>
+        <li>- « - » A – B renvoie le résultat de la soustraction de A et de B</li>
+        <li>- « / » A / B renvoie le résultat de la division de A par B
+        </li>
+        <li>- « * » A * B renvoie le résultat de la division de A par B
+        </li>
+        <li>- « ** » A ** B renvoie le résultat de A puissance B</li>
+        <h4>Comparaison</h4>
+        <p>Les opérateurs de comparaison servent à comparer deux valeurs, ils renvoient « true » si la 
+          condition est vraie, sinon ils renvoient « false ».
+          </p>
+          <p>En JavaScript on retrouve les opérateurs de comparaison suivants :</p>
+        <li>- « == » Teste l’égalité simple de deux valeurs (valeurs égales)</li>
+        <li>- « != » Teste l’inégalité simple de deux valeurs (valeurs inégales)
+        </li>
+        <li>- « === » Teste l’égalité stricte de deux valeurs (valeurs et types égaux)</li>
+        <li>- « !== » Teste l’inégalité stricte de deux valeurs (valeurs et types inégaux)
+        </li>
+        <li>- « < » Teste l’infériorité stricte d’une valeur par rapport à une autre
+        </li>
+        <li>- « > » Teste la supériorité stricte d’une valeur par rapport à une autre
+        </li>
+        <li>- « <= » Teste l’infériorité ou l’égalité d’une valeur par rapport à une autre</li>
+        <li>- « >= » Teste la supériorité ou l’égalité d’une valeur par rapport à une autre</li> 
+        <h4>Logique</h4> 
+        <p>Les opérateurs logiques servent à composer des conditions complexes (plusieurs conditions 
+          fusionnées). Ils renvoient TRUE si leur logique est respectée, sinon FALSE.</p>
+          <p>En JavaScript on retrouve :
+          </p>
+          <li>- « && » Les deux conditions l’entourant doivent être TRUE (A && B)</li>
+          <li>- « || » A moins l’une des deux conditions doit être TRUE (A || B)
+          </li>
+          <li>- « ! » Renvoie l’opposé du résultat de la condition | du booléen (!A)
+          </li>
+          <h4>instanceOf</h4>
+          <p>L’opérateur instanceOf permet de tester si la valeur a été générée à partir d’un constructeur 
+            de classe. Renvoie « true » si la valeur appartient à la classe spécifiée, sinon « false ».</p>
+            <p>Ex : « now instanceof Date » renverra « true » si now = new Date()</p>
+            <h4>typeof </h4>
+            <p>A l’instar de instanceof vu précédemment, typeof ne teste pas la valeur, mais renvoie 
+              simplement le type à laquelle elle appartient.</p>
+          <p>Ex : typeof 1000 renvoie « number »
+          </p>
+          <h4>Structures de contrôle</h4>
+          <p>Divers outils sont mis à disposition pour que vous puissiez gérer au maximum le 
+            comportement de votre code. Parmi ces outils, on trouve les structures de contrôle : des 
+            éléments de syntaxe permettant de modifier l’exécution du code « classique » du haut vers 
+            le bas.</p>
+            <h4>Conditionnement</h4>
+            <h4>SI, SINON</h4>
+            <p>La structure IF permet de conditionner l’exécution d’un bloc de code.
+              On vient tester si une condition est vraie, et si c’est le cas on vient exécuter le code spécifié. 
+              Il est possible de spécifier le code à exécuter dans le cas où la condition est fausse.
+              </p>
+              <p>Il est possible d’utiliser des « else if » : combinaison d’un if et d’une else, qui permet de 
+                tester une nouvelle condition si la première a été fausse.</p>
+       <p>Ici, toutes les conditions vont être testées jusqu’à trouver celle qui sera vraie (si aucune n’est 
+        vraie alors le « else » s’exécutera).</p>    
+        <h4>SWITCH</h4>  
+      <p>Un switch permet de programmer l’exécution de code en fonction de l’état d’une variable 
+        ou d’une expression.</p>  
+        <p>Dans l’exemple ci-dessus, en fonction de la valeur de la variable « variable », un cas différent 
+          du switch sera déclenché (si un cas se déclenche, les autres cas passent à la trappe).</p> 
+          <p>Si vous utilisez un switch, pensez bien à toujours mettre un cas « default » au cas où aucun 
+            des cas ne soit vrai (même principe que le « else »).</p>  
+            <h4>Ternaire</h4>
+            <p>Un ternaire est une version minifiée d’un « if ».
+              Son rôle est de retourner telle ou telle valeur en fonction d’une condition, le tout de 
+              manière ultra compacte.</p>
+              <p>Ici, notre ternaire retourne une chaine de caractère qui va changer en fonction du retour de 
+                la condition.</p>
+          <p>Si on devait reproduire le comportement d’un ternaire avec une fonction, on l’écrirait 
+            comme la fonction ci-dessus.
+            </p>
+            <h4>Boucles</h4>
+            <p>Parfois, il est utile de répéter des portions de code, en algorithmie en général il est possible 
+              de le faire avec les structures de contrôle WHILE et FOR, qui vont boucler chacune à leur 
+              manière, leur point d’arrêt étant paramétré au travers d’une condition à respecter.
+              </p>
+
+              <h4>WHILE</h4>
+
+            <p>Les boucles « while » (tant que... en français) sont des structures permettant de répéter en 
+              boucle une portion de code, tant que sa condition est respectée (vraie).
+              </p>
+        <p>Ici, variable prends +1 à chaque tour, ainsi, au troisième tour, la condition ne sera plus 
+          respectée, et la boucle s’arrêtera.</p>
+          <h4>FOR</h4>
+          <p>Une boucle « for » est une boucle qui va boucler un nombre de fois prédéfini.
+          </p>
+      <p>A chaque tout son « indice » (i,j,k en général) va être changé, la plupart du temps en y 
+        rajoutant 1, mais on peut très bien le multiplier par 2, soustraire 1… etc.</p>
+        <H4>Fonctions</H4>
+      <p>En algorithmie en général, il est possible d’enregistrer certaines portions de code dans le but 
+        de les utiliser à plusieurs endroits dans le code plutôt que de copier-coller le même code 
+        plusieurs fois.</p>
+        <p>On distingue deux types de fonctions :
+        </p>
+        <li>- Les procédures, des fonctions qui exécutent la portion de code associé sans avoir 
+          besoin de demander une quelconque donnée supplémentaire.</li>
+        <li>- Les fonctions « classiques », qui vont exécuter la portion de code associée en leur 
+          fournissant une valeur récupérée lors de son appel, on appelle cette valeur (il peut y 
+          en avoir plusieurs) « paramètre ».</li>
+          <p>Ici, la fonction supérieure est une procédure car elle ne dépend d’aucune donnée passée lors 
+            de son utilisation.</p>
+            <p>La fonction inférieure quant à elle est une fonction « classique », elle affiche le paramètre 
+              « travail » qui lui sera passé lors de l’appel.</p>
+              <p>On utilise les fonctions (qui sont des modèles) en les « appelant » : on marque le nom de la 
+                fonction et on y colle des parenthèses, qui, contiendront les potentiels paramètres, sinon 
+                vide.</p>
+          <p>ATTENTION : si vous appelez la fonction sans les parenthèses, vous obtiendrez la valeur de 
+            celle-ci : un objet contenant tout le bloc de code ; cela peut être utile lorsque vous utiliserez 
+            les fonctions en tant que call-back (fonction appelée par une autre fonction).
+            </p>
+
+        <H4>Type String</H4>
+        <p>Le type String est caractérisé par les guillemets qui l’entourent.</p>
+
+        <p>On y retrouve plusieurs fonctions utilisables afin de manipuler ses données :
+        </p>
+        <p> <strong>- String.trimStart() & String.trimEnd() & String.trim()
+        </strong><br>Enlève de la chaine de caractère les caractères « espace » du début & de la fin.</br>
+                  </p> 
+      <p><strong>- String.toUpperCase()</strong> <br>Transforme la chaine de caractère en majuscule.</br> </p>
+      <p><strong>- String.toLowerCase()
+        <br></strong>Transforme la chaine de caractères en minuscule.</p>
+        <p><strong>- String.substring(start, end)<br></strong>Retourne une chaine de caractère correspondant aux caractères entre l’indice 
+          « start » et l’indice « end ».</p>
+          <p><strong>- String.startsWith(chaine) & String.endsWith(chaine)
+            <br></strong>Retourne un booléen qui dit si la chaine de caractère commence ou termine par la 
+            chaine passée en paramètre.</p>
+            <p><strong>- String.split(separateur)<br></strong>Retourne un tableau contenant la découpe de la chaine de caractères en fonction du 
+              séparateur passé en paramètres.</p>
+              <p><strong>- String.slice(start, end)<br></strong>Retourne une nouvelle string contenant les caractères a partir de l’indice start 
+                jusqu’à l’indice end.
+                </p>
+        <p><strong>- String.replace(car_a_remplacer, car_remplaçant)
+          <br></strong>Remplace le premier caractère trouvé correspondant au 1er paramètre par le 2è 
+          paramètre.</p>
+          <p><strong>- String.replaceAll(car_a_remplacer, car_remplaçant)<br></strong>Remplace tous les caractères trouvés correspondants au 1er paramètre par le 2è 
+            paramètre.</p>
+        <p><strong>- String.repeat(count)<br></strong>Retourne une chaine de caractères contenant la répétition de la chaine en question 
+          « count » (paramètre) fois.</p>
+          <p><strong>- String.indexOf(modèle) & String.lastIndexOf(modèle)
+            <br></strong>Retourne respectivement l’index de la première, et dernière occurrence 
+            correspondant au modèle(paramètre).</p>
+            <p><strong>- String.includes(modèle)
+              <br></strong>Retourne un booléen indiquant si la chaine de caractères contient le modèle 
+              (paramètre).
+              </p>
+              <p><strong>- String.At(index)
+                <br></strong>Retourne le caractère se trouve à l’indice « index » (paramètre).</p>
+
+      <h4>Type Array</h4>
+      <p>Le type Array permet de gérer des données mixtes, en les stockant de manière ordonnée 
+        dans un tableau, où chaque élément possède un indice (sa position) permettant de 
+        récupérer son élément. On récupère une valeur en faisant :</p>
+        <p>tableau[indice] => retourne l’élément à l’indice donné.</p>
+        <p>De nombreuses fonctions existent pour manipuler ses données :</p>
+        <p><strong>- Array.concat(autre_tableau)
+          <br></strong>Retourne la fusion des deux tableaux l’un après l’autre dans un nouveau tableau.</p>
+          <p><strong>- Array.every(fonction_de_test)<br></strong>Retourne un booléen indiquant si tous les éléments du tableau retournent « true » à 
+            la fonction de test.
+            </p>
+            <p><strong>- Array.some(fonction_de_test)<br></strong>Retourne un booléen indiquant si au moins un élément du tableau retourne « true » 
+              à la fonction de test.</p>
+      <p><strong>- Array.fill()<br></strong>Rempli le tableau de différentes manières en fonction des paramètres.
+        https://developer.mozilla.org/enUS/docs/Web/JavaScript/Reference/Global_Objects/Array/fill</p>
+        <p><strong>- Array.filter(fonction_de_test)
+          <br></strong>Retourne un tableau contenant les éléments ayant retournés « true » à la fonction 
+          de test.</p>
+          <p><strong>- Array.find(fonction_de_test)
+            <br></strong>Retourne le premier élément du tableau ayant retourné true à la fonction de test.</p>
+            <p><strong>- Array.findIndex(fonction_de_test)<br></strong>Retourne l’index du premier élément ayant retourné « true » à la fonction de test.</p>
+            <p><strong>- Array.flat(profondeur)
+              <br></strong>Si le tableau contient des tableaux, alors la fonction va retourner un nouveau 
+              tableau avec les sous tableaux ayant été « dissous » et leurs éléments fusionnés 
+              avec le tableau d’origine.</p><p>Possibilité de spécifier une profondeur</p>
+              <p><strong>- Array.forEach(fonction_de_traitement)
+                <br></strong>Applique la fonction de traitement à tous les éléments du tableau.</p>
+                <p><strong>- Array.includes(valeur)
+                  <br></strong>Retourne un booléen indiquant si le tableau contient la valeur passée en paramètre.</p>
+                  <p><strong>- Array.indexOf(valeur)<br></strong>Si « valeur » existe dans le tableau, alors retourne l’index du premier élément 
+                    correspondant, sinon retourne -1.</p>
+                    <p><strong>- Array.join()<br></strong>Retourne une string contenant tous les éléments du tableau à la suite.</p>
+                    <p><strong>- Array.lastIndexOf(valeur)
+                      <br></strong></p>
+
+                      <p><strong><br></strong></p>
+    </ul>
+  </body>
+</html>
